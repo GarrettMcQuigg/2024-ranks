@@ -1,0 +1,15 @@
+<div class="wr-ranks-container">
+  <div class="title">Wide Receiver Rankings</div>
+  @for (wr of wrRanks; track $index) {
+  <div
+    class="wr-details"
+    (click)="toggleStrikethrough(wr)"
+    [class.strikethrough]="wr.isStrikethrough"
+  >
+    <div class="rank">{{ wr.positionRank }}</div>
+    <div class="player">{{ wr.name }}</div>
+  </div>
+  } @empty {
+  <div class="no-ranks">Oh fuck...</div>
+  }
+</div>

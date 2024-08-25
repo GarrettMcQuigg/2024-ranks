@@ -1,0 +1,15 @@
+<div class="rb-ranks-container">
+  <div class="title">Running Back Rankings</div>
+  @for (rb of rbRanks; track $index) {
+  <div
+    class="rb-details"
+    (click)="toggleStrikethrough(rb)"
+    [class.strikethrough]="rb.isStrikethrough"
+  >
+    <div class="rank">{{ rb.positionRank }}</div>
+    <div class="player">{{ rb.name }}</div>
+  </div>
+  } @empty {
+  <div class="no-ranks">Oh fuck...</div>
+  }
+</div>

@@ -1,0 +1,15 @@
+<div class="qb-ranks-container">
+  <div class="title">Quarterback Rankings</div>
+  @for (qb of qbRanks; track $index) {
+  <div
+    class="qb-details"
+    (click)="toggleStrikethrough(qb)"
+    [class.strikethrough]="qb.isStrikethrough"
+  >
+    <div class="rank">{{ qb.positionRank }}</div>
+    <div class="player">{{ qb.name }}</div>
+  </div>
+  } @empty {
+  <div class="no-ranks">Oh fuck...</div>
+  }
+</div>

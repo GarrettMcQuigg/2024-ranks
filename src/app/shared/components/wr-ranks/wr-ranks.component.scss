@@ -1,0 +1,33 @@
+.wr-ranks-container {
+  padding: 10px;
+  .title {
+    font-weight: 500;
+    font-size: larger;
+    margin: 0 0 10px 0;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .wr-details {
+    padding: 5px 0;
+    display: flex;
+    cursor: pointer;
+
+    .player {
+      margin-left: 5px;
+      font-weight: 500;
+    }
+
+    .rank {
+      font-weight: 600;
+      margin-right: 5px;
+    }
+  }
+}
+
+.strikethrough .rank,
+.strikethrough .player {
+  text-decoration: line-through;
+  color: red;
+}
